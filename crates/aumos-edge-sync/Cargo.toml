@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: BSL-1.1
+# Copyright (c) 2026 MuVeraAI Corporation
+
+[package]
+name        = "aumos-edge-sync"
+description = "Sync engine for the aumos-edge-runtime — push local state, pull remote config"
+version.workspace    = true
+edition.workspace    = true
+rust-version.workspace = true
+authors.workspace    = true
+license.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+
+[dependencies]
+aumos-edge-core = { workspace = true }
+serde           = { workspace = true }
+serde_json      = { workspace = true }
+chrono          = { workspace = true }
+uuid            = { workspace = true }
+thiserror       = { workspace = true }
+ureq            = { workspace = true }
+log             = { workspace = true }

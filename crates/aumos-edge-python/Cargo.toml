@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: BSL-1.1
+# Copyright (c) 2026 MuVeraAI Corporation
+
+[package]
+name        = "aumos-edge-python"
+description = "PyO3 Python binding stubs for aumos-edge-runtime"
+version.workspace    = true
+edition.workspace    = true
+rust-version.workspace = true
+authors.workspace    = true
+license.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+
+[lib]
+name   = "aumos_edge"
+crate-type = ["cdylib", "rlib"]
+
+# PyO3 is an optional dev-dependency so the workspace builds without it.
+# Users who want to build the Python extension must enable the `python` feature.
+[features]
+default = []
+python  = ["dep:pyo3"]
+
+[dependencies]
+aumos-edge-core = { workspace = true }
+aumos-edge-sync = { workspace = true }
+serde_json      = { workspace = true }
+pyo3            = { version = "0.21", features = ["extension-module"], optional = true }

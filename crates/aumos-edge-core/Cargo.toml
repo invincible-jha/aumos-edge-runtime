@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: BSL-1.1
+# Copyright (c) 2026 MuVeraAI Corporation
+
+[package]
+name        = "aumos-edge-core"
+description = "On-device governance enforcement — trust, budget, consent, and audit log"
+version.workspace    = true
+edition.workspace    = true
+rust-version.workspace = true
+authors.workspace    = true
+license.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+
+[features]
+default = ["std"]
+std     = [
+    "serde/std",
+    "sha2/std",
+    "chrono/std",
+    "uuid/std",
+    "toml/parse",
+]
+
+[dependencies]
+serde      = { workspace = true }
+serde_json = { workspace = true }
+toml       = { workspace = true }
+sha2       = { workspace = true }
+hex        = { workspace = true }
+chrono     = { workspace = true }
+uuid       = { workspace = true }
+thiserror  = { workspace = true }
+log        = { workspace = true }

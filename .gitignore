@@ -1,0 +1,15 @@
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pyo
+*.pyc
+__pycache__/
+.env
+node_modules/
+dist/
+*.node
+*.so
+*.dylib
+*.dll
+.DS_Store
+Thumbs.db

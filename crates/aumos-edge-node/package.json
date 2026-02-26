@@ -1,0 +1,37 @@
+{
+  "name": "@aumos/edge-runtime",
+  "version": "0.1.0",
+  "description": "On-device governance enforcement for AI agents — Node.js bindings",
+  "license": "BSL-1.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "*.node"
+  ],
+  "napi": {
+    "name": "aumos-edge-node",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-apple-darwin"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "napi build --platform --release --features nodejs",
+    "build:debug": "napi build --platform --features nodejs",
+    "prepublishOnly": "napi prepublish -t npm"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muveraai/aumos-edge-runtime.git"
+  },
+  "homepage": "https://aumos.ai"
+}
