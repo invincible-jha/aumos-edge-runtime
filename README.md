@@ -1,5 +1,7 @@
 # aumos-edge-runtime
 
+[![Governance Score](https://img.shields.io/badge/governance-self--assessed-blue)](https://github.com/aumos-ai/aumos-edge-runtime)
+
 On-device governance enforcement for AI agents operating offline or on constrained hardware.
 
 Part of the [Aumos](https://aumos.ai) open-source governance stack (Project Quasar, Phase 4).

@@ -1,0 +1,26 @@
+name: Governance Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  governance-lint:
+    name: Governance Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: AumOS Governance Lint
+        uses: aumos-ai/.github/.github/actions/governance-lint@main
+        with:
+          fail-on-warning: 'false'
+
+  fire-line-audit:
+    name: Fire Line Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: AumOS Fire Line Audit
+        uses: aumos-ai/.github/.github/actions/fire-line-audit@main

@@ -21,11 +21,15 @@
 //! No ML, no semantic ordering, no adaptive behaviour.
 
 pub mod conflict;
+pub mod conflict_resolution;
 pub mod queue;
 pub mod sync;
 pub mod transport;
 
 pub use conflict::{ConflictResolution, ConflictResolver, ConflictWinner, ResolutionStrategy};
+pub use conflict_resolution::{
+    BudgetState, ConflictStrategy, PolicyVersion, ResolvedBudget, ResolvedPolicy, ResolvedTrust,
+};
 pub use queue::{ActionQueue, QueuedAction};
 pub use sync::{SyncConfig, SyncEngine, SyncError, SyncReport};
 pub use transport::HttpTransport;
